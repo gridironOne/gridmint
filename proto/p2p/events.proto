@@ -1,0 +1,11 @@
+syntax = "proto3";
+package p2p.events;
+
+option go_package = "github.com/gridironOne/gridmint/p2p/pb";
+
+import "types/gridmint/gridmint.proto";
+
+message GossipedBlock {
+	gridmint.Block block = 1;
+	gridmint.Commit commit = 2;
+}
